@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BUG WA GACOR BY DENI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #0f0;
+      text-shadow: 0 0 10px #0f0;
+      font-size: 26px;
+    }
+    input {
+      width: 90%;
+      max-width: 400px;
+      padding: 12px;
+      font-size: 16px;
+      background: #111;
+      color: #0f0;
+      border: 2px solid #0f0;
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+    button {
+      margin: 15px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      background: #0f0;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #0f0;
+    }
+    button:hover {
+      background: #1f1;
+    }
+    #status {
+      margin-top: 25px;
+      background: #111;
+      border: 1px solid #0f0;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 16px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BUG WHATSAPP GACOR<br>BY DENI 🔥</h1>
+
+  <input type="text" id="target" placeholder="Masukkan Nomor Target (cth: 628xxxxxxxxx)">
+
+  <br>
+  <button onclick="simulate('delay')">🚀 BUG DELAY</button>
+  <button onclick="simulate('invis')">👻 INVISIBLE CHAR</button>
+  <button onclick="simulate('gacor')">💥 BUG GACOR 10000%</button>
+
+  <div id="status">>> Masukkan nomor target dan pilih jenis bug.</div>
+
+  <script>
+    async function simulate(mode) {
+      const target = document.getElementById("target").value.trim();
+      const status = document.getElementById("status");
+
+      if (!target.startsWith("62") || target.length < 10) {
+        status.innerText = "❌ Nomor tidak valid! Awali dengan 62 dan minimal 10 digit.";
+        return;
+      }
+
+      status.innerText = "🎯 TARGET: +" + target + "\n▶️ Menjalankan mode: " + mode.toUpperCase() + "...";
+
+      if (mode === "delay") {
+        for (let i = 180; i >= 0; i--) {
+          await new Promise(r => setTimeout(r, 1000));
+          status.innerText = "🎯 TARGET: +" + target + "\n[DELAY] " + i + " detik tersisa...";
+        }
+        status.innerText += "\n✅ Sukses Bug Delay 3 Menit Aktif!";
+      }
+      else if (mode === "invis") {
+        await new Promise(r => setTimeout(r, 3000));
+        status.innerText = "🎯 TARGET: +" + target + "\n📤 Mengirim pesan invisible...\n✅ Karakter tak terlihat terkirim!";
+      }
+      else if (mode === "gacor") {
+        status.innerText = "🎯 TARGET: +" + target + "\n🚨 MENYUSUP...\n📶 Koneksi brutal aktif...";
+        await new Promise(r => setTimeout(r, 5000));
+        status.innerText += "\n💣 BUG GACOR 10000% AKTIF! Pesan hilang, UI stuck, delay ON.\n✅ Sukses BY DENI 😈";
+      }
+    }
+  </script>
+
+</body>
+</html>
